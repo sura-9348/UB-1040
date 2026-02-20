@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+header {
+    background: #138ec7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    width: 220px;
+    height: 150px;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    width: 400px;
+    background: white;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-container input,
+.form-container select {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    background: #2e7d32;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1b5e20;
+}
+
+.result-box {
+    margin-top: 15px;
+    padding: 10px;
+    background: #e8f5e9;
+    border-radius: 6px;
+}
+
+.back-btn {
+    background: #555;
+}

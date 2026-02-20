@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Government Scheme Eligibility Portal</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f6f9;
+        }
+
+        header {
+            background-color: #5182df;
+            color: white;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 80px;
+        }
+
+        .language-select {
+            margin-top: 10px;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .icon {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <!-- Government Logo -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" 
+         alt="Government Logo" class="logo">
+
+    <!-- Main Title -->
+    <h1 id="mainTitle">Government Scheme Eligibility Checker</h1>
+    <p id="subTitle">Select a category to check your eligibility</p>
+
+    <!-- Language Dropdown -->
+    <div class="language-select">
+        <select onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="kn">Kannada</option>
+            <option value="hi">Hindi</option>
+        </select>
+    </div>
+</header>
+
+<div class="dashboard">
+
+    <div class="card" onclick="location.href='student.html'">
+        <div class="icon">🎓</div>
+        <h3 id="studentText">Student Scholarships</h3>
+    </div>
+
+    <div class="card" onclick="location.href='pension.html'">
+        <div class="icon">👴</div>
+        <h3 id="pensionText">Pension Schemes</h3>
+    </div>
+
+    <div class="card" onclick="location.href='farmer.html'">
+        <div class="icon">🌾</div>
+        <h3 id="farmerText">Farmer Schemes</h3>
+    </div>
+
+    <div class="card" onclick="location.href='women.html'">
+        <div class="icon">👩</div>
+        <h3 id="womenText">Women Welfare</h3>
+    </div>
+
+</div>
+
+<script>
+function changeLanguage(lang) {
+
+    if(lang === "en") {
+        document.getElementById("mainTitle").innerText = "Government Scheme Eligibility Checker";
+        document.getElementById("subTitle").innerText = "Select a category to check your eligibility";
+        document.getElementById("studentText").innerText = "Student Scholarships";
+        document.getElementById("pensionText").innerText = "Pension Schemes";
+        document.getElementById("farmerText").innerText = "Farmer Schemes";
+        document.getElementById("womenText").innerText = "Women Welfare";
+        document.getElementById("disabilityText").innerText = "Disability Schemes";
+    }
+
+    if(lang === "kn") {
+        document.getElementById("mainTitle").innerText = "ಸರ್ಕಾರಿ ಯೋಜನೆ ಅರ್ಹತೆ ಪರಿಶೀಲಕ";
+        document.getElementById("subTitle").innerText = "ನಿಮ್ಮ ಅರ್ಹತೆ ಪರಿಶೀಲಿಸಲು ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ";
+        document.getElementById("studentText").innerText = "ವಿದ್ಯಾರ್ಥಿ ವಿದ್ಯಾರ್ಥಿವೇತನ";
+        document.getElementById("pensionText").innerText = "ಪಿಂಚಣಿ ಯೋಜನೆಗಳು";
+        document.getElementById("farmerText").innerText = "ಕೃಷಿ ಯೋಜನೆಗಳು";
+        document.getElementById("womenText").innerText = "ಮಹಿಳಾ ಕಲ್ಯಾಣ";
+        document.getElementById("disabilityText").innerText = "ವಿಕಲಚೇತನ ಯೋಜನೆಗಳು";
+    }
+
+    if(lang === "hi") {
+        document.getElementById("mainTitle").innerText = "सरकारी योजना पात्रता जाँचकर्ता";
+        document.getElementById("subTitle").innerText = "अपनी पात्रता जांचने के लिए श्रेणी चुनें";
+        document.getElementById("studentText").innerText = "छात्रवृत्ति योजनाएं";
+        document.getElementById("pensionText").innerText = "पेंशन योजनाएं";
+        document.getElementById("farmerText").innerText = "किसान योजनाएं";
+        document.getElementById("womenText").innerText = "महिला कल्याण";
+        document.getElementById("disabilityText").innerText = "दिव्यांग योजनाएं";
+    }
+}
+</script>
+
+</body>
+</html>

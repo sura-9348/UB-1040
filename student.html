@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Scholarships</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1 id="title">Student Scholarship Eligibility</h1>
+</header>
+
+<div class="form-container">
+
+<label id="courseLabel">Course:</label>
+<select id="course">
+<option>PUC</option>
+<option>Diploma</option>
+<option>Degree</option>
+<option>Engineering</option>
+<option>Post Graduation</option>
+</select>
+
+<label id="incomeLabel">Annual Income:</label>
+<input type="number" id="income">
+
+<label id="categoryLabel">Category:</label>
+<select id="category">
+<option>General</option>
+<option>OBC</option>
+<option>SC</option>
+<option>ST</option>
+<option>Minority</option>
+</select>
+
+<label id="genderLabel">Gender:</label>
+<select id="gender">
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<label id="marksLabel">Percentage (%):</label>
+<input type="number" id="marks">
+
+<label id="ageLabel">Age:</label>
+<input type="number" id="age">
+
+<label id="stateLabel">State:</label>
+<select id="state">
+<option>Karnataka</option>
+<option>Other</option>
+</select>
+
+<button onclick="checkScholarship()" id="checkBtn">Check Eligibility</button>
+
+<div class="result-box">
+<p id="result"></p>
+</div>
+
+<button onclick="location.href='index.html'" class="back-btn" id="backBtn">Back</button>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+window.onload = function() {
+    let lang = localStorage.getItem("selectedLanguage") || "en";
+
+    if(lang === "kn"){
+        document.getElementById("title").innerText = "ವಿದ್ಯಾರ್ಥಿ ವಿದ್ಯಾರ್ಥಿವೇತನ ಅರ್ಹತೆ";
+        document.getElementById("courseLabel").innerText = "ಪಠ್ಯಕ್ರಮ:";
+        document.getElementById("incomeLabel").innerText = "ವಾರ್ಷಿಕ ಆದಾಯ:";
+        document.getElementById("categoryLabel").innerText = "ವರ್ಗ:";
+        document.getElementById("genderLabel").innerText = "ಲಿಂಗ:";
+        document.getElementById("marksLabel").innerText = "ಶೇಕಡಾವಾರು:";
+        document.getElementById("ageLabel").innerText = "ವಯಸ್ಸು:";
+        document.getElementById("stateLabel").innerText = "ರಾಜ್ಯ:";
+        document.getElementById("checkBtn").innerText = "ಅರ್ಹತೆ ಪರಿಶೀಲಿಸಿ";
+        document.getElementById("backBtn").innerText = "ಹಿಂದೆ";
+    }
+
+    if(lang === "hi"){
+        document.getElementById("title").innerText = "छात्रवृत्ति पात्रता";
+        document.getElementById("courseLabel").innerText = "कोर्स:";
+        document.getElementById("incomeLabel").innerText = "वार्षिक आय:";
+        document.getElementById("categoryLabel").innerText = "श्रेणी:";
+        document.getElementById("genderLabel").innerText = "लिंग:";
+        document.getElementById("marksLabel").innerText = "प्रतिशत:";
+        document.getElementById("ageLabel").innerText = "आयु:";
+        document.getElementById("stateLabel").innerText = "राज्य:";
+        document.getElementById("checkBtn").innerText = "पात्रता जांचें";
+        document.getElementById("backBtn").innerText = "वापस";
+    }
+}
+</script>
+
+</body>
+</html>
